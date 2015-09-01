@@ -4,7 +4,6 @@ install: ./gradlew check
 
 jdk:
   - oraclejdk7
-  - openjdk7
  
 before_install:
  - chmod +x gradlew
