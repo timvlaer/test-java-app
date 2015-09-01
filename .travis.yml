@@ -1,6 +1,6 @@
 language: java
 
-install: ./gradlew assemble
+install: ./gradlew check
 
 jdk:
   - oraclejdk7
