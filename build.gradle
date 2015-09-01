@@ -1,0 +1,28 @@
+group 'com.axxes.app'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'groovy'
+apply plugin: 'java'
+apply plugin: "maven"
+
+sourceCompatibility = 1.5
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+}
+
+dependencies {
+    compile 'org.codehaus.groovy:groovy-all:2.3.11'
+    compile 'com.google.guava:guava:18.0'
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+    testCompile 'org.assertj:assertj-core:3.1.0'
+}
+
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            repository(url: "file:///home/timvl/.m2/repository")
+        }
+    }
+}
